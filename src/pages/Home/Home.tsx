@@ -46,31 +46,35 @@ const Home: React.FC = () => {
           </p>
 
           <form className="home__form" onSubmit={handleSubmit} noValidate>
-            <label className="field">
-              <span className="field__label">Tipo de documento</span>
-              <select
-                value={form.documentType}
-                onChange={(e) => updateField({ documentType: e.target.value })}
-                className="field__select"
-              >
-                <option value="DNI">DNI</option>
-                <option value="CE">CE</option>
-                <option value="PAS">Pasaporte</option>
-              </select>
-            </label>
+            <div className="field-group">
+              <label className="field half">
+                <span className="field__label">Tipo de documento</span>
+                <select
+                  value={form.documentType}
+                  onChange={(e) =>
+                    updateField({ documentType: e.target.value })
+                  }
+                  className="field__select"
+                >
+                  <option value="DNI">DNI</option>
+                  <option value="CE">CE</option>
+                  <option value="PAS">Pasaporte</option>
+                </select>
+              </label>
 
-            <label className="field">
-              <span className="field__label">Nro. de documento</span>
-              <input
-                className="field__input"
-                value={form.documentNumber}
-                onChange={(e) =>
-                  updateField({ documentNumber: e.target.value })
-                }
-                placeholder="30216147"
-                required
-              />
-            </label>
+              <label className="field half">
+                <span className="field__label">Nro. de documento</span>
+                <input
+                  className="field__input"
+                  value={form.documentNumber}
+                  onChange={(e) =>
+                    updateField({ documentNumber: e.target.value })
+                  }
+                  placeholder="30216147"
+                  required
+                />
+              </label>
+            </div>
 
             <label className="field">
               <span className="field__label">Celular</span>
@@ -102,10 +106,10 @@ const Home: React.FC = () => {
                   updateField({ acceptedComms: e.target.checked })
                 }
               />
-              <span>Acepto recibir comunicaciones comerciales</span>
+              <span>Acepto la Política de Comunicaciones Comerciales</span>
             </label>
 
-            <div className="terms">Aplican T&eacute;rminos y Condiciones</div>
+            <div className="terms">Aplican Términos y Condiciones.</div>
 
             <div className="home__cta">
               <Button type="submit">Cotiza aquí</Button>
