@@ -1,0 +1,127 @@
+.plans {
+  &__back {
+    background: none;
+    border: none;
+    color: var(--bg-blue);
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__main {
+    padding: 0 13.5rem 7rem 13.5rem;
+  }
+
+  &__title {
+    color: var(--text-dark);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: var(--text-dark);
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
+
+  &__container {
+    margin-top: 3.5rem;
+    padding: 0 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-options {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__other {
+    margin: 1rem 0;
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+    }
+  }
+
+  &__other-input {
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    width: 160px;
+  }
+
+  &__list {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  &__list-item {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .plans {
+      &__header {
+        .stepper {
+          margin-bottom: 0;
+        }
+      }
+      &__main {
+        padding: 1rem;
+        flex-grow: 1;
+      }
+      &__title {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+        text-align: left;
+        margin: 0;
+      }
+      &__subtitle {
+        font-size: 1rem;
+        line-height: 1.75rem;
+      }
+      &__container {
+        padding: 0 1rem;
+        margin-top: 1rem;
+        gap: 1rem;
+
+        &-options {
+          flex-direction: column;
+          gap: 2.5rem;
+          margin: 1.5rem 0 2.5rem 0;
+          width: 100%;
+        }
+      }
+      &__other-input {
+        width: 100%;
+      }
+      &__list {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 0 1rem 1.5rem 1rem;
+      }
+    }
+  }
+  @media (min-width: 720px) {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__options {
+      flex-wrap: nowrap;
+    }
+  }
+}

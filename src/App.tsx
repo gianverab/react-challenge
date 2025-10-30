@@ -4,6 +4,7 @@ import "./App.scss";
 import TelephoneIcon from "./components/svg/telephone";
 
 const Home = lazy(() => import("./pages/Home/Home"));
+const Plans = lazy(() => import("./pages/Plans/Plans"));
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Suspense fallback={<div className="container">Cargando...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/plans" element={<Plans />} />
           </Routes>
         </Suspense>
       </main>
