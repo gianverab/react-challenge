@@ -6,7 +6,17 @@ import Plans from "../pages/Plans/Plans";
 import { UserContext } from "../context/UserContext";
 import { PlansContext } from "../context/PlansContext";
 
-const mockUserState = { name: "Rocío", age: 0 };
+const mockUserState = {
+  user: { name: "Rocío", lastName: "", age: 0, birthDay: "" },
+  loading: false,
+  form: {
+    documentType: "",
+    documentNumber: "",
+    phone: "",
+    acceptedPolicies: false,
+    acceptedComms: false,
+  },
+};
 const mockPlans = [
   {
     name: "Plan Básico",

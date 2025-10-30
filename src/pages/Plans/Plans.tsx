@@ -13,7 +13,7 @@ import OtherUserIcon from "../../components/svg/other";
 
 const Plans: React.FC = () => {
   const navigate = useNavigate();
-  const { state: userState, dispatch: userDispatch } = useUserContext();
+  const { state: userState } = useUserContext();
   const { state: plansState, dispatch: plansDispatch } = usePlansContext();
 
   // UI selection
