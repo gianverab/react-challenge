@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import "./base";
+
+:root {
+  --bg-dark: #070526;
+  --bg-white: #f9f9fb;
+  --bg-gray: #edeffc;
+  --bg-blue: #4f4fff;
+  --bg-green: #7df0ba;
+  --bg-light-gray: #d7dbf5;
+  --card-bg: #ffffff;
+  --card-border: #03050f;
+  --muted: #6b7280;
+  --accent: #ff3b63;
+  --accent-2: #2de2d6;
+  --text-dark: #141938;
+  --text-gray: #7981b2;
+  --accent-red: #ff1c44;
+  --radius-lg: 18px;
+  --container-max: 1160px;
+}
+
+/* global reset */
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family:
+    "Lato",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  background: var(--bg-white);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* container */
+.container {
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* small helpers */
+.row {
+  display: flex;
+  gap: 1rem;
+}
+.col {
+  flex: 1 1 0;
+}
+
+/* responsive utilities */
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
